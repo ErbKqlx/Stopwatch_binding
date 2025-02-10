@@ -13,7 +13,7 @@ import com.example.stopwatch.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
-    lateinit var stopwatch: Chronometer
+    //lateinit var stopwatch: Chronometer
     var running = false
     var offset: Long = 0
 
@@ -83,7 +83,7 @@ class MainActivity : AppCompatActivity() {
     override fun onSaveInstanceState(savedInstanceState: Bundle) {
         savedInstanceState.putLong(OFFSET_KEY, offset)
         savedInstanceState.putBoolean(RUNNING_KEY, running)
-        savedInstanceState.putLong(BASE_KEY, stopwatch.base)
+        savedInstanceState.putLong(BASE_KEY, binding.stopwatch.base)
         super.onSaveInstanceState(savedInstanceState)
     }
 
